@@ -1,0 +1,16 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.configPath": ".prettierrc.json",
+    "editor.formatOnSave": true,
+    "editor.insertSpaces": false,
+    "files.insertFinalNewline": true,
+    "files.eol": "\n",
+    "files.watcherExclude": {
+        "node_modules": true,
+        "**/node_modules": true
+    },
+    "search.exclude": {
+        "node_modules": true,
+        "**/node_modules": true
+    }
+}

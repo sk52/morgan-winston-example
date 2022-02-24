@@ -11,7 +11,13 @@ const PORT = 3000;
 // logger
 const logger = winston.createLogger({
     level: 'http',
-    format: format.combine(format.colorize(), format.timestamp(), format.printf(msg => { return `${msg.timestamp} [${msg.level}] ${msg.message}`; })),
+    format: format.combine(
+        format.colorize(),
+        format.timestamp(),
+        format.printf((msg) => {
+            return `${msg.timestamp} [${msg.level}] ${msg.message}`;
+        })
+    ),
     transports: [new winston.transports.Console()],
 });
 
@@ -20,7 +26,7 @@ const morganMiddleware = morgan(
     {
         stream: {
             write: (message) => logger.http(message.trim()),
-        }
+        },
     }
 );
 

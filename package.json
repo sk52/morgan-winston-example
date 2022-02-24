@@ -1,21 +1,28 @@
 {
-  "name": "morgan-winston-example",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "start:watch": "nodemon index.js",
-    "test": "jest"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.2",
-    "morgan": "^1.10.0",
-    "winston": "^3.6.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
-  }
+    "name": "morgan-winston-example",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "prepare": "husky install",
+        "start": "node index.js",
+        "start:watch": "nodemon index.js",
+        "test": "jest"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.2",
+        "morgan": "^1.10.0",
+        "winston": "^3.6.0"
+    },
+    "devDependencies": {
+        "husky": "^7.0.4",
+        "lint-staged": "^12.3.4",
+        "nodemon": "^2.0.15",
+        "prettier": "^2.5.1"
+    },
+    "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown"
+    }
 }
